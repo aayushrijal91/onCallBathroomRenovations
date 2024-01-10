@@ -7,6 +7,11 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="icon" href="./assets/images/favicon.png" type="image/png">
 	<title><?= $site ?></title>
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://oncallbathroomrenovations.com.au/">
+	<meta property="og:title" content="<?= $site ?> - Compare Loans Online | Find The Best Loan Rates & Apply Online">
+	<meta property="og:description" content="<?= $site ?>">
+	<meta property="og:image" content="https://oncallbathroomrenovations.com.au/assets/images/desktop.jpg">
 	<link rel="stylesheet" href="./assets/css/main.css?v=0.1">
 
 	<!-- Recaptcha Here -->
@@ -23,4 +28,3 @@
 </head>
 
 <body>
-	

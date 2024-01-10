@@ -33,7 +33,7 @@ body {
 
 //Go To Top
 #return-to-top {
-    @apply bg-grey hover:bg-dark border-2 border-white shadow-lg w-[50px] h-[50px] right-[55px] bottom-[95px] rounded-full transition-all duration-100 ease-linear fixed flex justify-center items-center z-10 drop-shadow-2xl;
+    @apply bg-secondary hover:bg-dark border-2 border-white shadow-lg w-[50px] h-[50px] right-[55px] bottom-[95px] rounded-full transition-all duration-100 ease-linear fixed flex justify-center items-center z-10 drop-shadow-2xl;
 }
 
 ::-webkit-scrollbar {
@@ -45,7 +45,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    @apply bg-primary;
+    @apply bg-secondary;
 }
 
 ::-webkit-scrollbar-thumb:hover {

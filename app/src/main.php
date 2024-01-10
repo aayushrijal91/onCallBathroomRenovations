@@ -9,7 +9,7 @@
                 <a href="#about-us" class="w-fit font-bold">About Us</a>
                 <a href="#services" class="w-fit font-bold">Services</a>
                 <a href="#why-us" class="w-fit font-bold">Why Us?</a>
-                <a href="#get-quote" class="w-fit font-bold">Get A Quote</a>
+                <a href="#form" class="w-fit font-bold">Get A Quote</a>
             </div>
 
             <div class="w-fit hidden lg:block">
@@ -33,7 +33,7 @@
                 <li><a href="#about-us" class="w-fit font-bold">About Us</a></li>
                 <li><a href="#services" class="w-fit font-bold">Services</a></li>
                 <li><a href="#why-us" class="w-fit font-bold">Why Us?</a></li>
-                <li><a href="#get-quote" class="w-fit font-bold">Get A Quote</a></li>
+                <li><a href="#form" class="w-fit font-bold">Get A Quote</a></li>
             </ul>
         </div>
     </div>
@@ -73,7 +73,7 @@
     </div>
 </div>
 
-<div class="container py-24 md:py-40 lg:py-60">
+<div class="container py-24 md:py-40 lg:py-60" id="about-us">
     <div class="flex flex-wrap justify-center md:justify-between gap-y-20">
         <div class="w-10/12 md:w-5/12">
             <p class="capitalize text-center md:text-start font-britannic text-4xl md:text-5xl lg:text-64 leading-none pt-10">We Create Luxury for your Private oasis</p>
@@ -93,7 +93,7 @@
     </div>
 </div>
 
-<section class="services">
+<section class="services" id="services">
     <div class="container">
         <div class="flex flex-wrap justify-between items-center">
             <p class="w-fit text-4xl md:text-5xl lg:text-64 capitalize font-britannic leading-none">Our Services</p>
@@ -132,7 +132,7 @@
     </div>
 </section>
 
-<section class="pt-36 lg:pt-44">
+<section class="pt-36 lg:pt-44" id="why-us">
     <div class="container">
         <div class="flex flex-wrap justify-center">
             <div class="w-9/12 text-center flex flex-col items-center">
@@ -171,7 +171,7 @@
     </div>
 </section>
 
-<section class="form pt-20 md:pt-40 lg:pt-60 pb-12 md:pb-36">
+<section class="form pt-20 md:pt-40 lg:pt-60 pb-12 md:pb-36" id="form">
     <div class="container">
         <div class="flex flex-wrap justify-center md:justify-between gap-y-12">
             <div class="w-11/12 xl:w-4/12">
@@ -179,7 +179,9 @@
             </div>
 
             <div class="w-full xl:w-7/12">
-                <form action="" method="POST" class="flex flex-wrap gap-y-3">
+                <form action="" method="POST" class="flex flex-wrap gap-y-3" enctype="multipart/form-data">
+                    <input type="hidden" name="token" id="recaptchaResponse" class="recaptchaResponse" />
+
                     <div class="w-full md:w-1/2 px-1.5">
                         <input type="text" class="form-control" placeholder="Name" name="name" required />
                     </div>
