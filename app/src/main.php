@@ -5,18 +5,20 @@
                 <?= renderImg('logo.png', 'logo') ?>
             </a>
 
-            <div class="w-fit hidden md:flex flex-wrap gap-x-5">
+            <div class="w-fit hidden lg:flex flex-wrap gap-x-5">
                 <a href="" class="w-fit font-bold">About Us</a>
                 <a href="" class="w-fit font-bold">Services</a>
                 <a href="" class="w-fit font-bold">Why Us?</a>
                 <a href="" class="w-fit font-bold">Get A Quote</a>
             </div>
 
-            <a href="#form" class="w-fit hidden md:btn bg-secondary text-white rounded-lg text-lg font-bold px-7">
-                Book Free Consult
-            </a>
+            <div class="w-fit hidden lg:block">
+                <a href="#form" class="w-fit btn bg-secondary text-white rounded-lg text-lg font-bold px-7">
+                    Book Free Consult
+                </a>
+            </div>
 
-            <button type="button" class="">
+            <button type="button" class="lg:hidden">
                 <svg width="62" height="12" viewBox="0 0 62 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M13.28 0.332V11.5H11.04V4.236L8.048 11.5H6.352L3.344 4.236V11.5H1.104V0.332H3.648L7.2 8.636L10.752 0.332H13.28ZM17.7346 2.14V4.94H21.4946V6.716H17.7346V9.676H21.9746V11.5H15.4946V0.315999H21.9746V2.14H17.7346ZM33.5623 11.5H31.3223L26.2503 3.836V11.5H24.0103V0.315999H26.2503L31.3223 7.996V0.315999H33.5623V11.5ZM37.9839 0.332V7.244C37.9839 8.00133 38.1812 8.58267 38.5759 8.988C38.9705 9.38267 39.5252 9.58 40.2399 9.58C40.9652 9.58 41.5252 9.38267 41.9199 8.988C42.3145 8.58267 42.5119 8.00133 42.5119 7.244V0.332H44.7679V7.228C44.7679 8.17733 44.5599 8.98267 44.1439 9.644C43.7385 10.2947 43.1892 10.7853 42.4959 11.116C41.8132 11.4467 41.0505 11.612 40.2079 11.612C39.3759 11.612 38.6185 11.4467 37.9359 11.116C37.2639 10.7853 36.7305 10.2947 36.3359 9.644C35.9412 8.98267 35.7439 8.17733 35.7439 7.228V0.332H37.9839Z" fill="#292929" />
                     <path d="M52 1.5H62" stroke="#292929" stroke-width="2" />
@@ -31,7 +33,7 @@
 <section class="banner">
     <div class="container relative">
         <div class="flex justify-center">
-            <div class="w-11/12 lg:w-7/12 text-center">
+            <div class="w-11/12 lg:w-9/12 xl:w-7/12 text-center">
                 <h1 class="font-britannic text-4xl md:text-64 leading-tight py-8 md:py-16">Melbourne's<br class="md:hidden" /> Leading Bathroom Renovations</h1>
                 <p class="text-base leading-loose opacity-60">
                     On Call Bathroom Renovations designs & constructs bathrooms filled with excellence and perfection.
@@ -46,12 +48,12 @@
             </div>
         </div>
     </div>
-    <?= renderImg('banner.jpg', 'background', 'md:-mt-28') ?>
+    <?= renderImg('banner.jpg', 'background', 'xl:-mt-28') ?>
 </section>
 
 <div class="container">
     <div class="flex flex-wrap justify-center">
-        <div class="w-8/12 flex flex-wrap justify-between items-center">
+        <div class="w-full xl:w-8/12 flex flex-wrap justify-between items-center" id="partners">
             <div class="w-fit"><?= renderImg('partner-1.png', 'logo') ?></div>
             <div class="w-fit"><?= renderImg('partner-2.png', 'logo') ?></div>
             <div class="w-fit"><?= renderImg('partner-3.png', 'logo') ?></div>
@@ -62,11 +64,11 @@
     </div>
 </div>
 
-<div class="container py-24 md:py-60">
+<div class="container py-24 md:py-40 lg:py-60">
     <div class="flex flex-wrap justify-center md:justify-between gap-y-20">
         <div class="w-10/12 md:w-5/12">
-            <p class="capitalize text-center md:text-start font-britannic text-4xl md:text-64 leading-none pt-10">We Create Luxury for your Private oasis</p>
-            <p class="text-sm md:text-xl text-center md:text-start opacity-60 leading-loose py-7 md:py-16">
+            <p class="capitalize text-center md:text-start font-britannic text-4xl md:text-5xl lg:text-64 leading-none pt-10">We Create Luxury for your Private oasis</p>
+            <p class="text-sm md:text-base lg:text-xl text-center md:text-start opacity-60 leading-loose py-7 md:py-16">
                 Trusted with over 14 years experience & 220 bathrooms renovated. We will ensure your project runs seamlessly & only the best of products are used as well as the best quality of workmanship in Melbourne.
             </p>
 
@@ -85,7 +87,7 @@
 <section class="services">
     <div class="container">
         <div class="flex flex-wrap justify-between items-center">
-            <p class="w-fit text-4xl md:text-64 capitalize font-britannic leading-none">Our Services</p>
+            <p class="w-fit text-4xl md:text-5xl lg:text-64 capitalize font-britannic leading-none">Our Services</p>
             <div class="flex flex-wrap gap-x-3">
                 <button type="button" id="prevArrow" class="h-[40px] w-[40px] md:h-[52px] md:w-[52px] flex justify-center items-center border-2 border-secondary rounded-lg">
                     <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -106,7 +108,7 @@
     $services = ["Bathroom<br /> Renovations", "Bathroom<br /> Remodelling", "Home<br /> Renovations", "Kitchen<br /> Renovations", "Backyard + Front Yard Renovations", "Unit<br /> Renovations"];
     ?>
     <div class="flex justify-end py-8 md:py-20">
-        <div class="w-11/12">
+        <div class="w-full xl:w-11/12">
             <div class="services-slider">
                 <?php foreach ($services as $key => $service) : ?>
                     <div class="bg-secondary h-[420px] md:h-[640px] rounded-lg overflow-hidden relative">
@@ -121,12 +123,12 @@
     </div>
 </section>
 
-<section class="pt-36 md:pt-44">
+<section class="pt-36 lg:pt-44">
     <div class="container">
         <div class="flex flex-wrap justify-center">
             <div class="w-9/12 text-center flex flex-col items-center">
-                <p class="text-4xl md:text-64 capitalize font-britannic leading-none">You Dream it, we make it reality!</p>
-                <p class="text-sm md:text-xl opacity-60 leading-loose py-8 md:py-14">
+                <p class="text-4xl md:text-5xl lg:text-64 capitalize font-britannic leading-none">You Dream it, we make it reality!</p>
+                <p class="text-sm md:text-base lg:text-xl opacity-60 leading-loose py-8 md:py-14">
                     Expect seamless projects with top-notch products and skilled workmanship in Melbourne. Whether it's a bathroom revamp, kitchen upgrade, or laundry improvement, we ensure a satisfying experience. Our dedicated team offers competitive prices and unwavering commitment to your satisfaction. Contact us for a free quote today!
                 </p>
                 <a href="#form" class="w-fit btn bg-secondary text-white rounded-lg text-lg font-bold px-7">
@@ -139,10 +141,10 @@
     <?= renderImg('dream-reality.jpg', 'lib', 'w-full hidden md:block') ?>
 </section>
 
-<section class="py-20 md:py-44 bg-dark px-5 md:px-0">
+<section class="py-20 md:py-44 bg-dark px-5 xl:px-0">
     <div class="container rounded-lg bg-secondary py-20 md:py-40 text-center recharge">
         <div class="flex flex-wrap justify-center">
-            <div class="w-11/12 md:w-7/12">
+            <div class="w-11/12 lg:w-10/12 xl:w-7/12">
                 <p class="font-britannic text-4xl md:text-64 text-white leading-none capitalize">Relax & Recharge in Luxury</p>
                 <p class="text-base md:text-xl leading-loose text-white py-8 md:py-14">
                     Transform your Melbourne bathroom into a luxury oasis of your dreams.
@@ -160,14 +162,14 @@
     </div>
 </section>
 
-<section class="form pt-20 md:pt-60 pb-12 md:pb-36">
+<section class="form pt-20 md:pt-40 lg:pt-60 pb-12 md:pb-36">
     <div class="container">
         <div class="flex flex-wrap justify-center md:justify-between gap-y-12">
-            <div class="w-11/12 md:w-4/12">
+            <div class="w-11/12 xl:w-4/12">
                 <p class="font-britannic text-4xl md:text-64 leading-none text-center md:text-start">Book a Free Onsite In-House Consultation in Melbourne</p>
             </div>
 
-            <div class="w-full md:w-7/12">
+            <div class="w-full xl:w-7/12">
                 <form action="" method="POST" class="flex flex-wrap gap-y-3">
                     <div class="w-full md:w-1/2 px-1.5">
                         <input type="text" class="form-control" placeholder="Name" name="name" required />

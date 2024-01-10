@@ -24,12 +24,40 @@ $('#return-to-top').on('click', () => {
     }, 500);
 });
 
+if ($(window).width() < 540) {
+    $('#partners').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        centerMode: true,
+        arrow: false,
+        autoplay: true
+    });
+}
+
 $('.services-slider').slick({
     slidesToShow: 5,
     slidesToScroll: 1,
     prevArrow: $("#prevArrow"),
     nextArrow: $("#nextArrow"),
     responsive: [
+        {
+            breakpoint: 1600,
+            settings: {
+                slidesToShow: 4,
+            }
+        },
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3,
+            }
+        },
+        {
+            breakpoint: 900,
+            settings: {
+                slidesToShow: 2,
+            }
+        },
         {
             breakpoint: 540,
             settings: {
