@@ -29,6 +29,14 @@ $('.services-slider').slick({
     slidesToScroll: 1,
     prevArrow: $("#prevArrow"),
     nextArrow: $("#nextArrow"),
+    responsive: [
+        {
+            breakpoint: 540,
+            settings: {
+                slidesToShow: 1,
+            }
+        }
+    ]
 });
 
 $(() => {
