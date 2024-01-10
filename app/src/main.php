@@ -1,4 +1,4 @@
-<header class="border-b border-grey md:border-0">
+<header class="border-b border-grey lg:border-0">
     <div class="container py-5 md:py-10">
         <div class="flex flex-wrap justify-between items-center">
             <a href="./" class="w-fit">
@@ -6,10 +6,10 @@
             </a>
 
             <div class="w-fit hidden lg:flex flex-wrap gap-x-5">
-                <a href="" class="w-fit font-bold">About Us</a>
-                <a href="" class="w-fit font-bold">Services</a>
-                <a href="" class="w-fit font-bold">Why Us?</a>
-                <a href="" class="w-fit font-bold">Get A Quote</a>
+                <a href="#about-us" class="w-fit font-bold">About Us</a>
+                <a href="#services" class="w-fit font-bold">Services</a>
+                <a href="#why-us" class="w-fit font-bold">Why Us?</a>
+                <a href="#get-quote" class="w-fit font-bold">Get A Quote</a>
             </div>
 
             <div class="w-fit hidden lg:block">
@@ -18,7 +18,7 @@
                 </a>
             </div>
 
-            <button type="button" class="lg:hidden">
+            <button type="button" id="triggerSlidingMenu" class="lg:hidden">
                 <svg width="62" height="12" viewBox="0 0 62 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M13.28 0.332V11.5H11.04V4.236L8.048 11.5H6.352L3.344 4.236V11.5H1.104V0.332H3.648L7.2 8.636L10.752 0.332H13.28ZM17.7346 2.14V4.94H21.4946V6.716H17.7346V9.676H21.9746V11.5H15.4946V0.315999H21.9746V2.14H17.7346ZM33.5623 11.5H31.3223L26.2503 3.836V11.5H24.0103V0.315999H26.2503L31.3223 7.996V0.315999H33.5623V11.5ZM37.9839 0.332V7.244C37.9839 8.00133 38.1812 8.58267 38.5759 8.988C38.9705 9.38267 39.5252 9.58 40.2399 9.58C40.9652 9.58 41.5252 9.38267 41.9199 8.988C42.3145 8.58267 42.5119 8.00133 42.5119 7.244V0.332H44.7679V7.228C44.7679 8.17733 44.5599 8.98267 44.1439 9.644C43.7385 10.2947 43.1892 10.7853 42.4959 11.116C41.8132 11.4467 41.0505 11.612 40.2079 11.612C39.3759 11.612 38.6185 11.4467 37.9359 11.116C37.2639 10.7853 36.7305 10.2947 36.3359 9.644C35.9412 8.98267 35.7439 8.17733 35.7439 7.228V0.332H37.9839Z" fill="#292929" />
                     <path d="M52 1.5H62" stroke="#292929" stroke-width="2" />
@@ -26,6 +26,15 @@
                     <path d="M52 10.5H60.75" stroke="#292929" stroke-width="2" />
                 </svg>
             </button>
+        </div>
+
+        <div class="hidden" id="sliding-menu">
+            <ul class="flex flex-col gap-y-4 items-end pt-5">
+                <li><a href="#about-us" class="w-fit font-bold">About Us</a></li>
+                <li><a href="#services" class="w-fit font-bold">Services</a></li>
+                <li><a href="#why-us" class="w-fit font-bold">Why Us?</a></li>
+                <li><a href="#get-quote" class="w-fit font-bold">Get A Quote</a></li>
+            </ul>
         </div>
     </div>
 </header>

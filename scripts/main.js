@@ -34,6 +34,10 @@ if ($(window).width() < 540) {
     });
 }
 
+$("#triggerSlidingMenu").on('click', function() {
+    $("#sliding-menu").slideToggle();
+})
+
 $('.services-slider').slick({
     slidesToShow: 5,
     slidesToScroll: 1,
