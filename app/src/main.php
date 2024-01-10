@@ -9,11 +9,11 @@
                 <a href="#about-us" class="w-fit font-bold">About Us</a>
                 <a href="#services" class="w-fit font-bold">Services</a>
                 <a href="#why-us" class="w-fit font-bold">Why Us?</a>
-                <a href="#form" class="w-fit font-bold">Get A Quote</a>
+                <a href="#get-quote" class="w-fit font-bold">Get A Quote</a>
             </div>
 
             <div class="w-fit hidden lg:block">
-                <a href="#form" class="w-fit btn bg-secondary text-white rounded-lg text-lg font-bold px-7">
+                <a href="#get-quote" class="w-fit btn bg-secondary text-white rounded-lg text-lg font-bold px-7">
                     Book Free Consult
                 </a>
             </div>
@@ -33,7 +33,7 @@
                 <li><a href="#about-us" class="w-fit font-bold">About Us</a></li>
                 <li><a href="#services" class="w-fit font-bold">Services</a></li>
                 <li><a href="#why-us" class="w-fit font-bold">Why Us?</a></li>
-                <li><a href="#form" class="w-fit font-bold">Get A Quote</a></li>
+                <li><a href="#get-quote" class="w-fit font-bold">Get A Quote</a></li>
             </ul>
         </div>
     </div>
@@ -49,7 +49,7 @@
                     From the design process through to final clean, you will be amazed by the service & quality consistency.
                 </p>
                 <div class="flex flex-wrap justify-center items-center pt-8 md:pt-16">
-                    <a href="#form" class="w-fit btn bg-secondary text-white rounded-lg text-lg font-bold px-7">
+                    <a href="#get-quote" class="w-fit btn bg-secondary text-white rounded-lg text-lg font-bold px-7">
                         Book Free Consult
                     </a>
                     <a href="tel:<?= $phone_number ?>" class="py-5 px-7 font-bold text-lg">Call Us Today</a>
@@ -82,7 +82,7 @@
             </p>
 
             <div class="flex justify-center md:justify-start">
-                <a href="#form" class="w-fit btn bg-secondary text-white rounded-lg text-lg font-bold px-7">
+                <a href="#get-quote" class="w-fit btn bg-secondary text-white rounded-lg text-lg font-bold px-7">
                     Book Free Consult
                 </a>
             </div>
@@ -121,7 +121,7 @@
             <div class="services-slider">
                 <?php foreach ($services as $key => $service) : ?>
                     <div class="bg-secondary h-[420px] md:h-[640px] rounded-lg overflow-hidden relative">
-                        <?= renderImg('service-' . $key + 1 . '.jpg', 'lib', 'w-full h-full object-cover') ?>
+                        <?= renderImg('service-' . ($key + 1) . '.jpg', 'lib', 'w-full h-full object-cover') ?>
                         <div class="content absolute w-full bottom-0 px-6 pt-16 pb-6">
                             <p class="font-britannic text-4xl text-center"><?= $service ?></p>
                         </div>
@@ -140,7 +140,7 @@
                 <p class="text-sm md:text-base lg:text-xl opacity-60 leading-loose py-8 md:py-14">
                     Expect seamless projects with top-notch products and skilled workmanship in Melbourne. Whether it's a bathroom revamp, kitchen upgrade, or laundry improvement, we ensure a satisfying experience. Our dedicated team offers competitive prices and unwavering commitment to your satisfaction. Contact us for a free quote today!
                 </p>
-                <a href="#form" class="w-fit btn bg-secondary text-white rounded-lg text-lg font-bold px-7">
+                <a href="#get-quote" class="w-fit btn bg-secondary text-white rounded-lg text-lg font-bold px-7">
                     Book Free Consult
                 </a>
             </div>
@@ -161,7 +161,7 @@
                     <b>Packages starting from $14,999.</b>
                 </p>
                 <div class="flex flex-wrap justify-center items-center">
-                    <a href="#form" class="w-fit btn bg-secondary text-white rounded-lg text-lg font-bold px-7">
+                    <a href="#get-quote" class="w-fit btn bg-secondary text-white rounded-lg text-lg font-bold px-7">
                         Book Free Consult
                     </a>
                     <a href="tel:<?= $phone_number ?>" class="px-7 py-5 text-lg text-white">Call Us Today</a>
@@ -171,7 +171,7 @@
     </div>
 </section>
 
-<section class="form pt-20 md:pt-40 lg:pt-60 pb-12 md:pb-36" id="form">
+<section class="form pt-20 md:pt-40 lg:pt-60 pb-12 md:pb-36" id="get-quote">
     <div class="container">
         <div class="flex flex-wrap justify-center md:justify-between gap-y-12">
             <div class="w-11/12 xl:w-4/12">
@@ -179,7 +179,7 @@
             </div>
 
             <div class="w-full xl:w-7/12">
-                <form action="" method="POST" class="flex flex-wrap gap-y-3" enctype="multipart/form-data">
+                <form action="./src/form" method="POST" id="form" class="flex flex-wrap gap-y-3" enctype="multipart/form-data">
                     <input type="hidden" name="token" id="recaptchaResponse" class="recaptchaResponse" />
 
                     <div class="w-full md:w-1/2 px-1.5">
@@ -187,7 +187,8 @@
                     </div>
 
                     <div class="w-full md:w-1/2 px-1.5">
-                        <input type="tel" class="form-control" placeholder="Contact Number" name="contact-number" required />
+                        <input type="tel" class="form-control" id="contactNumber" placeholder="Contact Number" name="contact-number" required />
+                        <p class="text-sm text-red-500 pt-2 ps-5 hidden" id="phoneError">Invalid Phone Number</p>
                     </div>
 
                     <div class="w-full md:w-1/2 px-1.5">

@@ -77,27 +77,27 @@ $(() => {
         if (file != "") {
             let theSplit = file.split('\\');
             let fileName = theSplit[theSplit.length - 1];
-            console.log(fileName);
             $(`#file-label`).html(fileName.substring(0, 50));
         }
     });
+});
 
-    function validateForm() {
-        let phoneInput = $('#contactNumber').val();
-        let re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+function validateForm() {
+    let phoneInput = $('#contactNumber').val();
+    let re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
 
-        if (!re.test(phoneInput)) {
-            $('#phoneError').fadeIn();
+    if (!re.test(phoneInput)) {
+        $('#phoneError').fadeIn();
 
-            return false;
-        } else {
-            $('#phoneError').fadeOut();
-        }
-
-        return true;
+        return false;
+    } else {
+        $('#phoneError').fadeOut();
     }
 
-    $("#form").on('submit', function () {
-        return validateForm();
-    });
+    return true;
+}
+
+$("#form").on('submit', function () {
+    console.log('test');
+    return validateForm();
 });
