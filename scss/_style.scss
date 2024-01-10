@@ -1,0 +1,34 @@
+section.services {
+    .services-slider {
+        .slick-slide {
+            margin: 0 6px;
+
+            .content {
+                background: linear-gradient(rgba(0, 0, 0, 0) 0%, #ffffff 40% 100%);
+            }
+        }
+    }
+}
+
+.recharge {
+    background: imgUrl('recharge.png') center;
+    background-size: cover;
+}
+
+section.form {
+    form {
+        .form-control {
+            width: 100%;
+            border: 2px solid #E7E7E7;
+            border-radius: 8px;
+            padding: 17px 20px;
+            font-size: 18px;
+            outline: none;
+            box-shadow: none;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+    }
+}
