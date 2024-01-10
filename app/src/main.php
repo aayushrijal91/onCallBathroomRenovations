@@ -187,7 +187,7 @@
                     </div>
 
                     <div class="w-full md:w-1/2 px-1.5">
-                        <input type="tel" class="form-control" id="contactNumber" placeholder="Contact Number" name="contact-number" required />
+                        <input type="tel" class="form-control" id="contactNumber" placeholder="Contact Number" name="phone" required />
                         <p class="text-sm text-red-500 pt-2 ps-5 hidden" id="phoneError">Invalid Phone Number</p>
                     </div>
 
